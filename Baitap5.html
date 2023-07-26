@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai tap 5</title>
+</head>
+<body>
+    <script>
+        function riseArray(arr){
+            for(let i = 0;i<arr.length;i++){
+                for(let j = 0; j<arr.length-i;j++){
+                    if(arr[j]>arr[j+1]){
+                        let temp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+
+        let inputUser = prompt("Nhập vào một mảng cách nhau bằng dấu phẩy").split(",");
+        let result = riseArray(inputUser);
+        alert(result);
+    </script>
+</body>
+</html>
